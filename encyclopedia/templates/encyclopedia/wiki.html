@@ -1,0 +1,26 @@
+{% extends "encyclopedia/layout.html" %}
+{% load md2 %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block body %}
+    
+    {% if title is not None %}
+        
+        <br>
+        {{ content|markdown:"safe" }}
+        <br>
+        <a href="{% url 'encyclopedia:initialize_form' title %}">Do you want to change anything in this content</a>
+
+        {% else %}
+        
+        {% block error %}
+        {% endblock %}
+        
+    <h1> Error 404, page not found </h1>
+
+    {% endif %}
+
+{% endblock %} 

@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    background-color: #e3eae5;
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+textarea {
+    height: 39vh;
+    width: 80%;
+}
+
+.main {
+    padding: 10px;
+}
+
+.search {
+    width: 250px;
+    font-size: 15px;
+    line-height: 15px;
+    height: 40px;
+}
+
+.navbar {
+    height: 8vh;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navbar h2 {
+    margin-top: 5px;
+}

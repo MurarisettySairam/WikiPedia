@@ -1,0 +1,28 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block body %}
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+     document.queryselector('#button').onclick=function(){
+        alert(`The Content is Saved`);
+     }
+    });
+</script>
+
+<h3>Welcome Post Your Content Here:</h3>
+    <form action="{% url 'encyclopedia:create'  %}" method="POST">
+        {% csrf_token %}
+        <h3>{{form.title.label}}</h3>
+        {{form.title}}
+        <br><br>
+        <h3>{{form.content.label}}</h3>
+        {{form.content}}
+        <br><br>
+        <input id="button1" type="submit" value="Save" class="btn btn-info">
+    </form>
+    <h3 style="color: blue;">{{message}}</h3>
+{% endblock %}
